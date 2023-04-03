@@ -1,0 +1,96 @@
+<app-navbar></app-navbar>
+<div class="container col-md-12 mt-0">
+    <div class="d-flex justify-content-center h-100">
+         <div class="card1">
+            <div class="card-header">
+                <h3 class="text-center">Credit Card</h3> 
+
+            </div> 
+            <div class="card-body">
+                <form >
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="bi bi-layers-fill"></i></span>
+                        </div>
+                        <input type="text" class="form-control" [(ngModel)]="FirstName" name="FirstName"
+                        placeholder="FirstName" id="cre_password" required>
+
+                    </div>
+    
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="bi bi-layers-fill"></i></span>
+                        </div>
+                        <input type="text" class="form-control" [(ngModel)]="LastName" name="LastName"
+                        placeholder="LastName" id="cre_password" required>
+
+                    </div>
+
+                    
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="bi bi-layers-fill"></i></span>
+                        </div>
+                        <input type="text" class="form-control" [(ngModel)]="Age" name="Age"
+                        placeholder="Age" id="cre_password" required>
+
+                    </div>
+
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="bi bi-layers-fill"></i></span>
+                        </div>
+                       
+                           <input type="text" class="form-control" [(ngModel)]="PanCard" name="PanCard"
+                           placeholder="PanCard" id="cre_password" required>
+                        
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="bi bi-layers-fill"></i></span>
+                            
+                        </div>
+                       
+                           <input type="text" class="form-control" [(ngModel)]="AccountNumber" name="AccountNumber"
+                           placeholder="AccountNumber" id="cre_password" required>
+                        
+                    </div>
+                    
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="bi bi-layers-fill"></i></span>
+                        </div>
+                        <input type="text" class="form-control" [(ngModel)]="Aadhar" name="Aadhar"
+                            placeholder="Aadhar no" id="cre_password" required>
+                    </div>
+            
+                    <div>
+                        <input type="submit" (click)="creditCardfun()" value="apply" class="btn float-right login_btn " style="width:50%">
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<table *ngIf="buttontest == true" class="table table-dark" style="margin-top:180px;">
+<thead>
+    <tr>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Age</th>
+        <th scope="col">PanCard</th>
+        <th scope="col">AAdhar</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let data of dummyarray">
+<td>{{data.FirstName}}</td>
+<td>{{data.LastName}}</td>
+<td>{{data.Age}}</td>
+<td>{{data.PanCard}}</td>
+<td>{{data.AAdhar}}</td>
+    </tr>
+</tbody>
+</table>
